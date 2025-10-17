@@ -1,5 +1,4 @@
 <?php
-// Arreglos con los nombres de los alumnos y las posibles calificaciones
 $alumnos = ["Fualano", "Mengano", "Sutano", "Emiliano", "Brayan",
              "Grabiel", "Cintia", "Britanny", "Kevin", "José Carlos"];
 
