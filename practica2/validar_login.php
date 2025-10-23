@@ -7,8 +7,9 @@ $password_valido = "1234";
 if ($_POST['usuario'] === $usuario_valido && $_POST['password'] === $password_valido) {
     $_SESSION["key"] = "algo";
 
+    // Si se marcó "Recordarme", crear cookie válida por 7 días
     if (isset($_POST['recordar']) && $_POST['recordar'] === 'si') {
-        setcookie("recordar_usuario", $_POST['usuario'], 0, "/"); 
+        setcookie("recordar_usuario", $_POST['usuario'], time() + (7 * 24 * 60 * 60), "/"); 
     }
 
     header("Location: inicio.php");

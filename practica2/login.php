@@ -1,12 +1,12 @@
 <?php
 session_start();
 
-if (isset($_SESSION["key"])) {
+// Si ya hay sesión o cookie, redirigir a inicio
+if (isset($_SESSION["key"]) || isset($_COOKIE["recordar_usuario"])) {
     header("Location: inicio.php");
     exit();
 }
 ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -58,4 +58,3 @@ if (isset($_SESSION["key"])) {
 
 </body>
 </html>
-
